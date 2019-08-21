@@ -2,11 +2,11 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomePage } from './home';
-// import { SharedModule } from 'modules/shared.module';
+import { SharedModule } from 'src/modules/shared.module';
 
 @NgModule({
   imports: [
-    // SharedModule,
+    SharedModule,
     CommonModule,
     RouterModule.forChild([
       {
@@ -17,7 +17,7 @@ import { HomePage } from './home';
     ])
   ],
   declarations: [
-    HomePage,
+    HomePage
   ],
   providers: [],
   exports: [HomePage],

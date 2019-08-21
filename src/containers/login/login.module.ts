@@ -2,12 +2,12 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LoginPage } from './login';
-// import { SharedModule } from 'modules/shared.module';
+import { SharedModule } from 'src/modules/shared.module';
 
 @NgModule({
   imports: [
-    // SharedModule,
     CommonModule,
+    SharedModule,
     RouterModule.forChild([
       {
         path: '',
@@ -17,7 +17,7 @@ import { LoginPage } from './login';
     ])
   ],
   declarations: [
-    LoginPage,
+    LoginPage
   ],
   providers: [],
   exports: [LoginPage],
