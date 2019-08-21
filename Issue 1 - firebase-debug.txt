@@ -1,0 +1,119 @@
+[debug] [2019-08-21T15:42:45.456Z] ----------------------------------------------------------------------
+[debug] [2019-08-21T15:42:45.458Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-08-21T15:42:45.459Z] CLI Version:   7.2.2
+[debug] [2019-08-21T15:42:45.459Z] Platform:      darwin
+[debug] [2019-08-21T15:42:45.459Z] Node Version:  v10.15.0
+[debug] [2019-08-21T15:42:45.459Z] Time:          Wed Aug 21 2019 08:42:45 GMT-0700 (Mountain Standard Time)
+[debug] [2019-08-21T15:42:45.459Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-21T15:42:45.469Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-21T15:42:45.470Z] > authorizing via signed-in user
+[debug] [2019-08-21T15:42:45.470Z] [iam] checking project base-angular-application for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-08-21T15:42:45.472Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/base-angular-application:testIamPermissions  
+
+[debug] [2019-08-21T15:42:45.795Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-21T15:42:45.798Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/base-angular-application  
+ 
+[debug] [2019-08-21T15:42:46.021Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'base-angular-application'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-08-21T15:42:46.025Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/base-angular-application/versions  
+
+[debug] [2019-08-21T15:42:47.563Z] <<< HTTP RESPONSE 200
+[info] i  hosting[base-angular-application]: beginning deploy...
+[info] i  hosting[base-angular-application]: found 10 files in dist/angularApp
+[debug] [2019-08-21T15:42:47.574Z] [hosting] hash cache [ZGlzdC9hbmd1bGFyQXBw] not populated
+[debug] [2019-08-21T15:42:47.605Z] [hosting] hash cache [ZGlzdC9hbmd1bGFyQXBw] stored for 10 files
+[debug] [2019-08-21T15:42:47.606Z] [hosting][hash queue][FINAL]
+[debug] [2019-08-21T15:42:47.606Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/base-angular-application/versions/518127118be54b16:populateFiles  
+ <request body omitted>
+[debug] [2019-08-21T15:42:47.923Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-21T15:42:47.923Z] <<< HTTP RESPONSE BODY
+[debug] [2019-08-21T15:42:48.330Z] [populateQueue] Retrying task index 0
+[debug] [2019-08-21T15:42:48.331Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/base-angular-application/versions/518127118be54b16:populateFiles  
+ <request body omitted>
+[debug] [2019-08-21T15:42:49.068Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-21T15:42:49.074Z] [hosting][populate queue][FINAL]
+[debug] [2019-08-21T15:42:49.074Z] [hosting] uploads queued: 10
+[debug] [2019-08-21T15:42:50.951Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[base-angular-application]: file upload complete
+[debug] [2019-08-21T15:42:50.952Z] [hosting] deploy completed after 3388ms
+[debug] [2019-08-21T15:42:51.056Z] [
+  {
+    "config": {
+      "public": "dist/angularApp",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "base-angular-application"
+    },
+    "site": "base-angular-application",
+    "version": "sites/base-angular-application/versions/518127118be54b16"
+  }
+]
+[info] i  hosting[base-angular-application]: finalizing version...
+[debug] [2019-08-21T15:42:51.057Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/base-angular-application/versions/518127118be54b16?updateMask=status  
+
+[debug] [2019-08-21T15:42:51.370Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-21T15:42:51.370Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2019-08-21T15:42:51.437Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Wed, 21 Aug 2019 15:42:51 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": "?updateMask=status",
+        "query": "updateMask=status",
+        "pathname": "/v1beta1/sites/base-angular-application/versions/518127118be54b16",
+        "path": "/v1beta1/sites/base-angular-application/versions/518127118be54b16?updateMask=status",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/base-angular-application/versions/518127118be54b16?updateMask=status"
+      },
+      "method": "PATCH"
+    }
+  }
+}
