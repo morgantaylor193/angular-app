@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+:host {
+  // Mobile Styles and Base Level Styles
+  
+  // Plus Sized Mobile Devices Media Query
+  @media screen and (min-width: $fabletMinWidth) {
+
+  }
+
+  // Tablet > Desktop Media Query
+  @media screen and (min-width: $tabletMinWidth) {
+
+  }
+}

@@ -1,0 +1,14 @@
+// Utility Style Sheet.
+// Add global classes here, they should be limited.
+@import 'variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,800&display=swap');
+
+* {
+  font-family: 'Muli', sans-serif;
+}
+
+.page-max-width {
+	max-width: $siteMaxWidth;
+	min-width: $siteMinWidth;
+	margin: 0 auto;
+}
