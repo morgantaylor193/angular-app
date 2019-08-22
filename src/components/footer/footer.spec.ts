@@ -10,7 +10,7 @@ describe('AppFooter', () => {
     }).compileComponents();
   }));
 
-  it('should create the home page', () => {
+  it('should create the footer component', () => {
     const fixture = TestBed.createComponent(AppFooter);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();

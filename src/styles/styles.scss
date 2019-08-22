@@ -7,6 +7,18 @@
   font-family: 'Muli', sans-serif;
 }
 
+.header-offset {
+  padding-top: 5.2rem;
+}
+
+.page-wrapper {
+  max-width: $siteMaxWidth;
+  min-width: $siteMinWidth;
+  margin: 0 auto;
+  padding: 5.2rem 0 3rem 0;
+  min-height: calc(100vh - 13rem);
+}
+
 .page-max-width {
 	max-width: $siteMaxWidth;
 	min-width: $siteMinWidth;
