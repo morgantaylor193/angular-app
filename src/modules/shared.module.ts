@@ -3,10 +3,10 @@ import { AppHeader } from 'src/components/header/header';
 import { AppFooter } from 'src/components/footer/footer';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-// import { LinkHelper } from 'src/services/linkHelper';
+import { LinkHelper } from 'src/services/link-service/link-helper';
 
 @NgModule({
-  imports: [RouterModule, CommonModule],
+  imports: [ RouterModule, CommonModule ],
   declarations: [
     AppHeader,
     AppFooter,
@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
     AppFooter,
   ],
   providers: [
-    // LinkHelper
+    LinkHelper
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

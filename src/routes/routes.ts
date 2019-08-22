@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from 'src/services/authguard/authguard';
 
 const routes: Routes = [
 	//Home Page
 	{
 		path: '',
 		pathMatch: 'full',
-		loadChildren: '../containers/home/home.module#HomePageModule'
+    loadChildren: '../containers/home/home.module#HomePageModule',
+    canActivate: [ AuthGuard ]
   },
   {
 		path: 'login',
@@ -16,7 +18,8 @@ const routes: Routes = [
   {
 		path: 'room/:id',
 		pathMatch: 'full',
-		loadChildren: '../containers/details/details.module#DetailsPageModule'
+    loadChildren: '../containers/details/details.module#DetailsPageModule',
+    canActivate: [ AuthGuard ]
 	}
 ];
 
