@@ -1,7 +1,32 @@
 @import '../../styles/variables.scss';
 
 :host {
-  // Mobile Styles and Base Level Styles
+  .floor-container {
+    background: $gray;
+
+    .floor-inner-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .first-floor, .second-floor {
+        color: $primaryColor;
+        font-size: $remM;
+        padding-bottom: 0.3rem;
+        border-bottom: $borderMedium solid transparent;
+        width: 50%;
+        background: $gray;
+        padding: 0.7rem;
+        text-align: center;
+        cursor: pointer;
+
+        &.active {
+          color: $highlightColor;
+          border-bottom: $borderMedium solid $highlightColor;
+        }
+      }
+    }
+  }
   
   // Plus Sized Mobile Devices Media Query
   @media screen and (min-width: $fabletMinWidth) {

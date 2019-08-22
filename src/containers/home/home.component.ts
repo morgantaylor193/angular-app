@@ -8,6 +8,8 @@ import { AuthService } from '../../services/auth.service';
 })
 export class HomeComponent implements OnInit {
 
+  public firstFloor = true;
+
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
@@ -15,5 +17,14 @@ export class HomeComponent implements OnInit {
 
   async signIn(): Promise<void> {
     await this.authService.signIn();
+  }
+
+  public displayFloor(floor){
+    if(floor === 1){
+      this.firstFloor = true;
+    }
+    else if(floor === 2){
+      this.firstFloor = false;
+    }
   }
 }

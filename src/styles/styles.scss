@@ -7,8 +7,36 @@
   font-family: 'Muli', sans-serif;
 }
 
+.header-offset {
+  padding-top: 5.2rem;
+}
+
+.page-wrapper {
+  max-width: $siteMaxWidth;
+  min-width: $siteMinWidth;
+  margin: 0 auto;
+  padding: 5.2rem 0 3rem 0;
+  min-height: calc(100vh - 13rem);
+}
+
 .page-max-width {
 	max-width: $siteMaxWidth;
 	min-width: $siteMinWidth;
 	margin: 0 auto;
+}
+
+.standard-button {
+  width: 100%;
+  border-radius: $buttonRadius;
+  background: $primaryColor;
+  padding: 1rem 0;
+  color: $white;
+  text-align: center;
+
+  &:hover {
+    background: $highlightColor;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px 2px $gray;
+    transition: all 0.5s;
+  }
 }
