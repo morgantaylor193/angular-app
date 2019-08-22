@@ -12,3 +12,17 @@
 	min-width: $siteMinWidth;
 	margin: 0 auto;
 }
+
+.standard-button {
+  width: 100%;
+  border-radius: $buttonRadius;
+  background: $primaryColor;
+  padding: 1rem 0;
+  color: $white;
+  text-align: center;
+
+  &:hover {
+    background: $highlightColor;
+    cursor: pointer;
+  }
+}
