@@ -1,7 +1,8 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HomePage } from './home';
+import { HomeComponent } from './home.component';
+import { RoomsComponent } from '../../components/rooms/rooms.component';
 import { SharedModule } from 'src/modules/shared.module';
 
 @NgModule({
@@ -12,16 +13,17 @@ import { SharedModule } from 'src/modules/shared.module';
       {
         path: '',
         pathMatch: 'full',
-        component: HomePage
+        component: HomeComponent
       }
     ])
   ],
   declarations: [
-    HomePage
+    HomeComponent,
+    RoomsComponent
   ],
   providers: [],
-  exports: [HomePage],
+  exports: [HomeComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
-export class HomePageModule {}
+export class HomeModule {}

@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+// import { HomeModule } from '../containers/home/home.module';
 const routes: Routes = [
 	//Home Page
 	{
 		path: '',
 		pathMatch: 'full',
-		loadChildren: '../containers/home/home.module#HomePageModule'
+		loadChildren: '../containers/home/home.module#HomeModule'
   },
   {
 		path: 'login',
