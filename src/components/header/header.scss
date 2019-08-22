@@ -1,15 +1,31 @@
 @import '../../styles/variables.scss';
 
 :host {
-  // Mobile Styles and Base Level Styles
+  .site-header {
+    width: 100%;
+    border-bottom: $borderMedium solid $primaryColor;
+    box-shadow: 2px 2px 8px 2px $gray;
+    padding: 1rem 0;
+    position: fixed;
+    background: $white;
+
+    .content {
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      text-decoration: none;
+
+      .logo {
+        width: 3rem;
+        height: 3rem;
+      }
   
-  // Plus Sized Mobile Devices Media Query
-  @media screen and (min-width: $fabletMinWidth) {
-
-  }
-
-  // Tablet > Desktop Media Query
-  @media screen and (min-width: $tabletMinWidth) {
-
+      .title {
+        font-size: $remXL;
+        color: $primaryColor;
+        font-weight: $normal;
+        padding-left: 1rem;
+      }
+    }
   }
 }

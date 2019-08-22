@@ -1,0 +1,20 @@
+<div class="header-offset">
+  <div class="floor-container">
+    <div class="page-max-width floor-inner-container">
+      <div class="first-floor" 
+        [ngClass]="{'active': firstFloor}"
+        (click)="displayFloor(1)">
+        First Floor
+      </div>
+      <div class="second-floor" 
+        [ngClass]="{'active': !firstFloor}"
+        (click)="displayFloor(2)">
+        Second Floor
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-max-width">
+  <home-office-map [firstFloor]="firstFloor"></home-office-map>
+</div>
