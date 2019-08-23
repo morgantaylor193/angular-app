@@ -5,6 +5,7 @@ import { Client } from '@microsoft/microsoft-graph-client';
 import { AlertsService } from './alerts.service';
 import { OAuthSettings } from '../app/app.constants';
 import { User } from '../interfaces/user.interface';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -27,11 +28,10 @@ export class AuthService {
     let result = await this.msalService.loginPopup(OAuthSettings.scopes)
       .catch((reason) => {
         this.alertsService.add('Login failed', JSON.stringify(reason, null, 2));
-        console.log(reason);
       });
 
     if (result) {
-      console.log('result');
+      console.log(result);
       this.authenticated = true;
       this.user = await this.getUser();
     }

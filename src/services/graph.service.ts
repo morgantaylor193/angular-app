@@ -55,11 +55,13 @@ export class GraphService {
     try {
       let result =  await this.graphClient
         .api('/me/findRooms(RoomList=\'LibertyCorporateOffice@drivetime.com\')')
-        .version("beta")
+        .version('beta')
         .get();
 
+      console.log(2, result);
       return result.value;
     } catch (error) {
+      console.log(error);
       this.alertsService.add('Could not get rooms', JSON.stringify(error, null, 2));
     }
   }

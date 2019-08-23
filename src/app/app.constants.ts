@@ -1,8 +1,14 @@
 export const OAuthSettings = {
-    appId: '9e7bc41b-455b-42ef-b94a-7592fdc43353',
-    scopes: [
-      "user.read",
-      "calendars.read",
-      "user.readbasic.all"
-    ]
+  authority: 'https://login.microsoftonline.com/1aff0669-ee5f-40b8-9800-b5ec4f39c48e',
+  appId: 'fcc368e8-62b4-443c-95a5-2cc92916bf42',
+  redirectUri: 'http://localhost:4200',
+  scopes: [
+    'user.read',
+    'calendars.read',
+    'user.readbasic.all'
+    // 'openid',
+    // 'profile',
+    // 'offline_access',
+    // 'calendars.readwrite'
+  ]
 };
