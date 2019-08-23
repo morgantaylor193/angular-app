@@ -20,7 +20,6 @@ import { ActiveRoom } from 'src/services/activeRoom/active-room';
     MsalModule.forRoot({
       clientID: OAuthSettings.appId,
       authority: OAuthSettings.authority,
-      redirectUri: OAuthSettings.redirectUri
     }),
     SharedModule,
     RouterModule
