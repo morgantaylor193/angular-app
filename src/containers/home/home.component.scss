@@ -1,29 +1,44 @@
 @import '../../styles/variables.scss';
 
 :host {
-  .floor-container {
-    background: $gray;
-
-    .floor-inner-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .first-floor, .second-floor {
-        color: $primaryColor;
-        font-size: $remM;
-        padding-bottom: 0.3rem;
-        border-bottom: $borderMedium solid transparent;
-        width: 50%;
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    
+    .right-col {
+      .floor-container {
         background: $gray;
-        padding: 0.7rem;
-        text-align: center;
-        cursor: pointer;
-
-        &.active {
-          color: $highlightColor;
-          border-bottom: $borderMedium solid $highlightColor;
+    
+        .floor-inner-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+    
+          .first-floor, .second-floor {
+            color: $primaryColor;
+            font-size: $remM;
+            padding-bottom: 0.3rem;
+            border-bottom: $borderMedium solid transparent;
+            width: 50%;
+            background: $gray;
+            padding: 0.7rem;
+            text-align: center;
+            cursor: pointer;
+    
+            &.active {
+              color: $highlightColor;
+              border-bottom: $borderMedium solid $highlightColor;
+            }
+          }
         }
+      }
+    }
+
+    .left-col {
+      .title {
+        background: $gray;
+        color: $primaryColor;
+        padding: 0.7rem 1rem;
       }
     }
   }
@@ -35,6 +50,22 @@
 
   // Tablet > Desktop Media Query
   @media screen and (min-width: $tabletMinWidth) {
+    .home-container {
+      display: flex;
+      flex-direction: row;
+    
+      .left-col {
+        order: 1;
+        width: 30%;
+        height: calc(100vh - 7.3rem);
+        overflow: scroll;
+        border: $borderMedium solid $gray;
+      }
 
+      .right-col {
+        order: 2;
+        width: 70%;
+      }
+    }
   }
 }
