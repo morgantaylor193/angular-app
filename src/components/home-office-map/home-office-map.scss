@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+@import '../../styles/animations.scss';
+
+:host {
+  .selectedRoom {
+    fill: $highlightColor;
+    animation: fade-in-out-pulse 1.5s forwards infinite;
+  }
+
+  .occupied {
+    fill: $red;
+  }
+
+  .available {
+    fill: $green;
+  }
+}

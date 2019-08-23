@@ -8,6 +8,7 @@ import { MsalModule } from '@azure/msal-angular';
 import { OAuthSettings } from './app.constants';
 import { RouterModule } from '@angular/router';
 import { AuthGuard } from 'src/services/authguard/authguard';
+import { ActiveRoom } from 'src/services/activeRoom/active-room';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { AuthGuard } from 'src/services/authguard/authguard';
     SharedModule,
     RouterModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, ActiveRoom],
   bootstrap: [AppComponent]
 })
 

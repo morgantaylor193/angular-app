@@ -119,41 +119,41 @@
     <rect class="theDen rec-area-outline" x="89.4" y="355.7" transform="matrix(-0.9903 0.1392 -0.1392 -0.9903 270.2027 757.5651)" width="38.5" height="65"/>
     <rect class="gym rec-area" x="636.7" y="493.6" width="95.6" height="82.3"/>
     <polygon class="gameRoom rec-area-outline" points="1092.5,340.6 1047,235.7 1081.8,202.5 1156.2,277"/>			
-    <rect class="reality meeting-room" x="445.2" y="272.4" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -36.1072 67.7637)" width="42.5" height="39.3"/>
+    <rect class="reality meeting-room" [ngClass]="{'available': isAvailable(reality), 'occupied': isAvailable(reality), 'selectedRoom': activeRoom === 'reality'}" x="445.2" y="272.4" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -36.1072 67.7637)" width="42.5" height="39.3"/>
     <path class="dark-green" d="M484.3,270.2l5.3,38l-41.1,5.8l-5.3-38L484.3,270.2 M485.2,269.1l-43,6.1l5.6,39.9l43-6.1L485.2,269.1 L485.2,269.1z"/>
-    <rect class="revloution meeting-room" x="406.5" y="278.2" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -37.3063 62.2034)" width="39.3" height="39.3"/>
+    <rect class="revloution meeting-room" [ngClass]="{'available': isAvailable(revloution), 'occupied': isAvailable(revloution), 'selectedRoom': activeRoom === 'revloution'}" x="406.5" y="278.2" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -37.3063 62.2034)" width="39.3" height="39.3"/>
     <path class="dark-green" d="M442.4,276.2l5.3,38l-38,5.3l-5.3-38L442.4,276.2 M443.3,275.1l-39.9,5.6l5.6,39.9l39.9-5.6L443.3,275.1 L443.3,275.1z"/>
-    <rect class="chaos meeting-room" x="347.8" y="284.9" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -38.7174 55.4882)" width="59.1" height="39.3"/>
+    <rect class="chaos meeting-room" [ngClass]="{'available': isAvailable(chaos), 'occupied': isAvailable(chaos), 'selectedRoom': activeRoom === 'chaos'}" x="347.8" y="284.9" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -38.7174 55.4882)" width="59.1" height="39.3"/>
     <path class="dark-green" d="M403.5,281.6l5.3,38l-57.5,8.1l-5.3-38L403.5,281.6 M404.3,280.4l-59.5,8.4l5.6,39.9l59.5-8.4L404.3,280.4 L404.3,280.4z"/>
-    <rect class="pi meeting-room" x="125.8" y="349.6" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -49.6503 25.0015)" width="56.3" height="35.9"/>
+    <rect class="pi meeting-room" [ngClass]="{'available': isAvailable(pi), 'occupied': isAvailable(pi), 'selectedRoom': activeRoom === 'pi'}" x="125.8" y="349.6" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -49.6503 25.0015)" width="56.3" height="35.9"/>
     <path class="dark-green" d="M178.9,346.4l4.9,34.5l-54.8,7.7l-4.9-34.5L178.9,346.4 M179.7,345.3l-56.7,8l5.1,36.5l56.7-8L179.7,345.3 L179.7,345.3z"/>
-    <rect class="code meeting-room" x="118.3" y="571.6" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -80.8189 24.8224)" width="37.5" height="37.5"/>
+    <rect class="code meeting-room" [ngClass]="{'available': isAvailable('code'), 'occupied': isAvailable('code'), 'selectedRoom': activeRoom === 'code'}" x="118.3" y="571.6" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -80.8189 24.8224)" width="37.5" height="37.5"/>
     <path class="dark-green" d="M152.6,569.7l5.1,36.1l-36.1,5.1l-5.1-36.1L152.6,569.7 M153.4,568.6l-38.1,5.4l5.4,38.1l38.1-5.4 L153.4,568.6L153.4,568.6z"/>
-    <rect class="theLab meeting-room" x="112" y="519.5" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -74.6894 23.509)" width="37.5" height="52.4"/>
+    <rect class="theLab meeting-room" [ngClass]="{'available': isAvailable(theLab), 'occupied': isAvailable(theLab), 'selectedRoom': activeRoom === 'theLab'}" x="112" y="519.5" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -74.6894 23.509)" width="37.5" height="52.4"/>
     <path class="dark-green" d="M145.2,517.7l7.2,50.9l-36.1,5.1l-7.2-50.9L145.2,517.7 M146,516.6l-38.1,5.4l7.4,52.9l38.1-5.4L146,516.6 L146,516.6z"/>
-    <rect class="gravity meeting-room" x="482.7" y="545.4" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -73.6642 75.8206)" width="45.1" height="38.3"/>
+    <rect class="gravity meeting-room" [ngClass]="{'available': isAvailable(gravity), 'occupied': isAvailable(gravity), 'selectedRoom': activeRoom === 'gravity'}" x="482.7" y="545.4" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -73.6642 75.8206)" width="45.1" height="38.3"/>
     <path class="dark-green" d="M524.5,543l5.2,37l-43.6,6.1l-5.2-37L524.5,543 M525.3,541.9l-45.6,6.4l5.5,39l45.6-6.4L525.3,541.9 L525.3,541.9z"/>
-    <rect class="reaction meeting-room" x="440.8" y="551.5" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -74.9337 69.8561)" width="42.4" height="38.3"/>
+    <rect class="reaction meeting-room" [ngClass]="{'available': isAvailable(reaction), 'occupied': isAvailable(reaction), 'selectedRoom': activeRoom === 'reaction'}" x="440.8" y="551.5" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -74.9337 69.8561)" width="42.4" height="38.3"/>
     <path class="dark-green" d="M479.9,549.3l5.2,37l-41,5.8l-5.2-37L479.9,549.3 M480.8,548.2l-43,6l5.5,39l43-6L480.8,548.2L480.8,548.2z"/>
-    <rect class="think meeting-room" x="732.8" y="494.1" width="32.3" height="32.3"/>
+    <rect class="think meeting-room" [ngClass]="{'available': isAvailable(think), 'occupied': isAvailable(think), 'selectedRoom': activeRoom === 'think'}" x="732.8" y="494.1" width="32.3" height="32.3"/>
     <path class="dark-green" d="M764.6,494.6v31.3h-31.3v-31.3H764.6 M765.6,493.6h-33.3v33.3h33.3V493.6L765.6,493.6z"/>
-    <rect class="roots meeting-room" x="732.8" y="526.4" width="32.3" height="48.8"/>
+    <rect class="roots meeting-room" [ngClass]="{'available': isAvailable(roots), 'occupied': isAvailable(roots), 'selectedRoom': activeRoom === 'roots'}" x="732.8" y="526.4" width="32.3" height="48.8"/>
     <path class="dark-green" d="M764.6,526.9v47.8h-31.3v-47.8H764.6 M765.6,525.9h-33.3v49.8h33.3V525.9L765.6,525.9z"/>
-    <rect class="rainmaker meeting-room" x="635.5" y="233.9" width="83.4" height="52.9"/>
+    <rect class="rainmaker meeting-room" [ngClass]="{'available': isAvailable(rainmaker), 'occupied': isAvailable(rainmaker), 'selectedRoom': activeRoom === 'rainmaker'}" x="635.5" y="233.9" width="83.4" height="52.9"/>
     <path class="dark-green" d="M718.4,234.4v51.9H636v-51.9H718.4 M719.4,233.4H635v53.9h84.4V233.4L719.4,233.4z"/>
-    <path class="t1 meeting-room-two" d="M791.6,234.1c0,48.9,39.7,88.6,88.6,88.6c48.9,0,88.6-39.7,88.6-88.6"/>
-    <rect class="t2 meeting-room" x="702.4" y="336.6" width="33.1" height="31.6"/>
+    <path class="breakroom meeting-room-two" [ngClass]="{'available': isAvailable(breakroom), 'occupied': isAvailable(breakroom), 'selectedRoom': activeRoom === 'breakroom'}" d="M791.6,234.1c0,48.9,39.7,88.6,88.6,88.6c48.9,0,88.6-39.7,88.6-88.6"/>
+    <rect class="fuel meeting-room" [ngClass]="{'available': isAvailable(fuel), 'occupied': isAvailable(fuel), 'selectedRoom': activeRoom === 'fuel'}"x="702.4" y="336.6" width="33.1" height="31.6"/>
     <path class="dark-green" d="M735,337.1v30.6h-32.1v-30.6H735 M736,336.1h-34.1v32.6H736V336.1L736,336.1z"/>
-    <rect class="t3 meeting-room" x="788.7" y="336.6" width="35.1" height="31.6"/>
+    <rect class="spark meeting-room" [ngClass]="{'available': isAvailable(spark), 'occupied': isAvailable(spark), 'selectedRoom': activeRoom === 'spark'}" x="788.7" y="336.6" width="35.1" height="31.6"/>
     <path class="dark-green" d="M823.3,337.1v30.6h-34.1v-30.6H823.3 M824.3,336.1h-36.1v32.6h36.1V336.1L824.3,336.1z"/>
-    <rect class="t4 meeting-room" x="735.5" y="336.6" width="53.2" height="31.6"/>
+    <rect class="dialogue meeting-room" [ngClass]="{'available': isAvailable(dialogue), 'occupied': isAvailable(dialogue), 'selectedRoom': activeRoom === 'dialogue'}" x="735.5" y="336.6" width="53.2" height="31.6"/>
     <path class="dark-green" d="M788.2,337.1v30.6H736v-30.6H788.2 M789.2,336.1H735v32.6h54.2V336.1L789.2,336.1z"/>
-    <rect class="t5 meeting-room" x="843.1" y="366.1" width="35.9" height="31.4"/>
+    <rect class="transparent meeting-room" [ngClass]="{'available': isAvailable(transparent), 'occupied': isAvailable(transparent), 'selectedRoom': activeRoom === 'transparent'}" x="843.1" y="366.1" width="35.9" height="31.4"/>
     <path class="dark-green" d="M878.5,366.6V397h-34.9v-30.4H878.5 M879.5,365.6h-36.9V398h36.9V365.6L879.5,365.6z"/>
-    <rect class="meeting-room-two" x="895.5" y="398" width="47.7" height="29.5"/>
-    <rect class="meeting-room-two" x="902.5" y="347" width="34.4" height="51"/>
-    <rect class="meeting-room-two" x="959.3" y="365.6" width="32.4" height="32.4"/>
-    <rect class="t6 meeting-room" x="1006.7" y="366.1" width="33.3" height="60.9"/>
+    <rect class="enigma meeting-room-two" [ngClass]="{'available': isAvailable(enigma), 'occupied': isAvailable(enigma), 'selectedRoom': activeRoom === 'enigma'}" x="895.5" y="398" width="47.7" height="29.5"/>
+    <rect class="axiom meeting-room-two" [ngClass]="{'available': isAvailable(axiom), 'occupied': isAvailable(axiom), 'selectedRoom': activeRoom === 'axiom'}" x="902.5" y="347" width="34.4" height="51"/>
+    <rect class="lol meeting-room-two" [ngClass]="{'available': isAvailable(lol), 'occupied': isAvailable(lol), 'selectedRoom': activeRoom === 'lol'}" x="959.3" y="365.6" width="32.4" height="32.4"/>
+    <rect class="thePlurb meeting-room" [ngClass]="{'available': isAvailable(thePlurb), 'occupied': isAvailable(thePlurb), 'selectedRoom': activeRoom === 'thaPlurb'}" x="1006.7" y="366.1" width="33.3" height="60.9"/>
     <path class="dark-green" d="M1039.5,366.6v59.9h-32.3v-59.9H1039.5 M1040.5,365.6h-34.3v61.9h34.3V365.6L1040.5,365.6z"/>
     <polygon class="outline" points="1273.5,395.4 1081.8,202.5 1047,235.7 635,233.8 635,287.2 490.8,309 485.1,269.4 162.6,314.6 167.3,347 85,358.9 120.7,612.1 204.3,600.2 208.8,628.6 530.7,580.9 525,542 636.6,525.4 637.2,576.1 1121.5,574.3 1121.5,543.5 "/>
   </svg>
@@ -281,43 +281,43 @@
   <rect class="dark-green" x="275.7" y="412.3" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -58.3197 49.575)" width="99.1" height="58.8"/>
   <rect class="dark-green" x="696.6" y="366.1" width="104.1" height="59.5"/>
   <rect class="dark-green" x="1044.8" y="349.3" width="20.2" height="78.6"/>
-  <rect class="meeting-room room-wow" x="163.5" y="310" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -43.4486 29.7784)" width="55.3" height="31"/>
+  <rect class="meeting-room wow" [ngClass]="{'available': isAvailable('wow'), 'occupied': isAvailable('wow'), 'selectedRoom': activeRoom === 'wow'}" x="163.5" y="310" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -43.4486 29.7784)" width="55.3" height="31"/>
   <path class="dark-green" d="M216,306.9l4.2,29.7l-53.8,7.6l-4.2-29.7L216,306.9 M216.9,305.7l-55.8,7.8l4.5,31.7l55.8-7.8L216.9,305.7 L216.9,305.7z"/>
-  <rect class="meeting-room room-the-cloud" x="236.3" y="588.7" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -81.534 42.6268)" width="55.3" height="31"/>
+  <rect class="meeting-room theCloud" [ngClass]="{'available': isAvailable('theCloud'), 'occupied': isAvailable('theCloud'), 'selectedRoom': activeRoom === 'theCloud'}" x="236.3" y="588.7" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -81.534 42.6268)" width="55.3" height="31"/>
   <path class="dark-green" d="M288.8,585.5l4.2,29.7l-53.8,7.6l-4.2-29.7L288.8,585.5 M289.6,584.4l-55.8,7.8l4.5,31.7l55.8-7.8 L289.6,584.4L289.6,584.4z"/>
-  <rect class="meeting-room room-compas" x="206.9" y="594.6" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -82.7655 36.803)" width="29.6" height="31"/>
+  <rect class="meeting-room compas" [ngClass]="{'available': isAvailable('compas'), 'occupied': isAvailable('compas'), 'selectedRoom': activeRoom === 'compas'}" x="206.9" y="594.6" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -82.7655 36.803)" width="29.6" height="31"/>
   <path class="dark-green" d="M233.7,593.2l4.2,29.7l-28.3,4l-4.2-29.7L233.7,593.2 M234.6,592.1l-30.3,4.3l4.5,31.7l30.3-4.3L234.6,592.1 L234.6,592.1z"/>
-  <rect class="meeting-room room-alchmey" x="472.2" y="553.1" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -74.2823 75.1161)" width="55.3" height="31"/>
+  <rect class="meeting-room alchmey" [ngClass]="{'available': isAvailable('alchmey'), 'occupied': isAvailable('alchmey'), 'selectedRoom': activeRoom === 'alchmey'}" x="472.2" y="553.1" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -74.2823 75.1161)" width="55.3" height="31"/>
   <path class="dark-green" d="M524.7,549.9l4.2,29.7l-53.8,7.6l-4.2-29.7L524.7,549.9 M525.5,548.8l-55.8,7.8l4.5,31.7l55.8-7.8 L525.5,548.8L525.5,548.8z"/>
-  <rect class="meeting-room room-avant-garde" x="443.3" y="558.9" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -75.4974 69.351)" width="29.5" height="31"/>
+  <rect class="meeting-room avantGarde" [ngClass]="{'available': isAvailable('avantGarde'), 'occupied': isAvailable('avantGarde'), 'selectedRoom': activeRoom === 'avantGarde'}" x="443.3" y="558.9" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -75.4974 69.351)" width="29.5" height="31"/>
   <path class="dark-green" d="M470,557.6l4.2,29.7l-28.2,4l-4.2-29.7L470,557.6 M470.9,556.5l-30.2,4.2l4.5,31.7l30.2-4.2L470.9,556.5 L470.9,556.5z"/>
-  <rect class="meeting-room room-ploarity" x="638" y="522.8" width="33.4" height="51.9"/>
+  <rect class="meeting-room ploarity" [ngClass]="{'available': isAvailable('ploarity'), 'occupied': isAvailable('ploarity'), 'selectedRoom': activeRoom === 'ploarity'}" x="638" y="522.8" width="33.4" height="51.9"/>
   <path class="dark-green" d="M670.9,523.3v50.9h-32.4v-50.9H670.9 M671.9,522.3h-34.4v52.9h34.4V522.3L671.9,522.3z"/>
-  <rect class="meeting-room room-coexist" x="671.4" y="541.3" width="45.7" height="33.4"/>
+  <rect class="meeting-room coexist" [ngClass]="{'available': isAvailable('coexist'), 'occupied': isAvailable('coexist'), 'selectedRoom': activeRoom === 'coexist'}" x="671.4" y="541.3" width="45.7" height="33.4"/>
   <path class="dark-green" d="M716.6,541.8v32.4h-44.7v-32.4H716.6 M717.6,540.8h-46.7v34.4h46.7V540.8L717.6,540.8z"/>
-  <rect class="meeting-room room-colosseum" x="882" y="492.3" width="81.9" height="33.1"/>
+  <rect class="meeting-room colosseum" [ngClass]="{'available': isAvailable('colosseum'), 'occupied': isAvailable('colosseum'), 'selectedRoom': activeRoom === 'colosseum'}" x="882" y="492.3" width="81.9" height="33.1"/>
   <path class="dark-green" d="M963.3,492.9v31.9h-80.6v-31.9H963.3 M964.5,491.7h-83.1v34.4h83.1V491.7L964.5,491.7z"/>
-  <rect class="meeting-room room-tomorrow" x="1106.4" y="497.8" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -33.4808 948.2688)" width="43.1" height="33.4"/>
+  <rect class="meeting-room tomorrow" [ngClass]="{'available': isAvailable('tomorrow'), 'occupied': isAvailable('tomorrow'), 'selectedRoom': activeRoom === 'tomorrow'}" x="1106.4" y="497.8" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -33.4808 948.2688)" width="43.1" height="33.4"/>
   <path class="dark-green" d="M1131.4,488.2l22.9,22.9l-29.8,29.8l-22.9-22.9L1131.4,488.2 M1131.4,486.8l-31.2,31.2l24.3,24.3l31.2-31.2 L1131.4,486.8L1131.4,486.8z"/>
-  <rect class="meeting-room room-yesterday" x="1137" y="467.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.8811 960.964)" width="43.1" height="33.4"/>
+  <rect class="meeting-room yesterday" [ngClass]="{'available': isAvailable('yesterday'), 'occupied': isAvailable('yesterday'), 'selectedRoom': activeRoom === 'yesterday'}" x="1137" y="467.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.8811 960.964)" width="43.1" height="33.4"/>
   <path class="dark-green" d="M1162.1,457.6l22.9,22.9l-29.8,29.8l-22.9-22.9L1162.1,457.6 M1162.1,456.1l-31.2,31.2l24.3,24.3l31.2-31.2 L1162.1,456.1L1162.1,456.1z"/>
-  <rect class="meeting-room room-why" x="1168.2" y="438.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 26.1892 973.0386)" width="38.9" height="33.4"/>
+  <rect class="meeting-room why" [ngClass]="{'available': isAvailable('why'), 'occupied': isAvailable('why'), 'selectedRoom': activeRoom === 'why'}" x="1168.2" y="438.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 26.1892 973.0386)" width="38.9" height="33.4"/>
   <path class="dark-green" d="M1189.6,430l22.9,22.9l-26.8,26.8l-22.9-22.9L1189.6,430 M1189.6,428.6l-28.2,28.2l24.3,24.3l28.2-28.2 L1189.6,428.6L1189.6,428.6z"/>
-  <rect class="meeting-room room-riveter" x="717.1" y="541.3" width="36.1" height="33.4"/>
+  <rect class="meeting-room riveter" [ngClass]="{'available': isAvailable('riveter'), 'occupied': isAvailable('riveter'), 'selectedRoom': activeRoom === 'riveter'}" x="717.1" y="541.3" width="36.1" height="33.4"/>
   <path class="dark-green" d="M752.7,541.8v32.4h-35.1v-32.4H752.7 M753.7,540.8h-37.1v34.4h37.1V540.8L753.7,540.8z"/>
-  <rect class="meeting-room room-unknow" x="1063.9" y="210" transform="matrix(0.7071 -0.7071 0.7071 0.7071 156.9083 830.2093)" width="33.4" height="31.3"/>
+  <rect class="meeting-room unknow" [ngClass]="{'available': isAvailable('unknow'), 'occupied': isAvailable('unknow'), 'selectedRoom': activeRoom === 'unknow'}" x="1063.9" y="210" transform="matrix(0.7071 -0.7071 0.7071 0.7071 156.9083 830.2093)" width="33.4" height="31.3"/>
   <path class="dark-green" d="M1081.4,203.5l21.5,21.5l-22.9,22.9l-21.5-21.5L1081.4,203.5 M1081.4,202.1l-24.3,24.3l22.9,22.9l24.3-24.3 L1081.4,202.1L1081.4,202.1z"/>
-  <rect class="meeting-room room-shh" x="1094.5" y="228.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 144.2827 860.7592)" width="33.4" height="55"/>
+  <rect class="meeting-room shh" [ngClass]="{'available': isAvailable('shh'), 'occupied': isAvailable('shh'), 'selectedRoom': activeRoom === 'shh'}" x="1094.5" y="228.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 144.2827 860.7592)" width="33.4" height="55"/>
   <path class="dark-green" d="M1103.6,225.7l38.2,38.2l-22.9,22.9l-38.2-38.2L1103.6,225.7 M1103.6,224.3l-24.3,24.3l39.6,39.6l24.3-24.3 L1103.6,224.3L1103.6,224.3z"/>
-  <rect class="meeting-room room-lady-justice" x="403" y="275.2" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -36.7634 64.9307)" width="85.6" height="40.2"/>
+  <rect class="meeting-room ladyJustice" [ngClass]="{'available': isAvailable('ladyJustice'), 'occupied': isAvailable('ladyJustice'), 'selectedRoom': activeRoom === 'ladyJustice'}"x="403" y="275.2" transform="matrix(0.9903 -0.1392 0.1392 0.9903 -36.7634 64.9307)" width="85.6" height="40.2"/>
   <path class="dark-green" d="M484.9,270l5.5,38.8l-83.8,11.8l-5.5-38.8L484.9,270 M485.8,268.9L400,281l5.7,40.8l85.8-12.1L485.8,268.9 L485.8,268.9z"/>
-  <path class="meeting-room room-360" d="M1062.9,556.7c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4s23.4,10.5,23.4,23.4 S1075.8,556.7,1062.9,556.7z"/>
+  <path class="meeting-room 360" [ngClass]="{'available': isAvailable('360'), 'occupied': isAvailable('360'), 'selectedRoom': activeRoom === '360'}" d="M1062.9,556.7c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4s23.4,10.5,23.4,23.4 S1075.8,556.7,1062.9,556.7z"/>
   <path class="dark-green" d="M1062.9,510.4c12.6,0,22.9,10.3,22.9,22.9s-10.3,22.9-22.9,22.9s-22.9-10.3-22.9-22.9 C1040,520.7,1050.2,510.4,1062.9,510.4 M1062.9,509.4c-13.2,0-23.9,10.7-23.9,23.9s10.7,23.9,23.9,23.9 c13.2,0,23.9-10.7,23.9-23.9S1076.1,509.4,1062.9,509.4L1062.9,509.4z"/>
-  <rect class="meeting-room room-friction" x="821.3" y="362.3" width="60.9" height="32.8"/>
+  <rect class="meeting-room friction" [ngClass]="{'available': isAvailable('friction'), 'occupied': isAvailable('friction'), 'selectedRoom': activeRoom === 'friction'}" x="821.3" y="362.3" width="60.9" height="32.8"/>
   <path class="dark-green" d="M881.5,363v31.6h-59.6V363H881.5 M882.8,361.7h-62.2v34.1h62.2V361.7L882.8,361.7z"/>
-  <rect class="meeting-room room-core" x="821.3" y="395.3" width="29.4" height="29.4"/>
+  <rect class="meeting-room core" [ngClass]="{'available': isAvailable('core'), 'occupied': isAvailable('core'), 'selectedRoom': activeRoom === 'core'}" x="821.3" y="395.3" width="29.4" height="29.4"/>
   <path class="dark-green" d="M850,395.9V424h-28.1v-28.1H850 M851.3,394.6h-30.6v30.6h30.6V394.6L851.3,394.6z"/>
-  <rect class="meeting-room room-aha" x="850.4" y="395.3" width="31.7" height="29.3"/>
+  <rect class="meeting-room aha" [ngClass]="{'available': isAvailable('aha'), 'occupied': isAvailable('aha'), 'selectedRoom': activeRoom === 'aha'}" x="850.4" y="395.3" width="31.7" height="29.3"/>
   <path class="dark-green" d="M881.5,395.9v28h-30.4v-28H881.5 M882.8,394.6h-33.1v30.6h33.1V394.6L882.8,394.6z"/>
   <polygon class="private-room" points="697.9,312.2 637.2,312.2 637.2,235.2 719.2,235.2 719.2,302.9 697.7,302.5"/>
   <rect class="private-room" x="719.2" y="235.2" width="40.6" height="48.4"/>

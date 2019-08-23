@@ -1,5 +1,6 @@
 <div class="room-card"
-  [ngClass]="{'active': roomData.active}">
+  [ngClass]="{'active': getActive(roomData.id)}"
+  (click)="setActive(roomData.id)">
   <div class="row">
     <div class="name">{{roomData.name}}</div>
     <div class="capacity">
@@ -8,10 +9,10 @@
     </div>
   </div>
   <div class="row">
-    <div class="status">{{roomData.statusMessage}}</div>
+    <div class="status" [ngClass]="{'available': roomData.available}">{{roomData.statusMessage}}</div>
     <div class="location">{{roomData.location}}</div>
   </div>
-  <div *ngIf="roomData.active">
+  <div *ngIf="getActive(roomData.id)">
     <div class="standard-button">Reserve Now</div>
     <div class="book row">
       <!-- Add in logic here to only check in or out if you are the meeting organizer. -->

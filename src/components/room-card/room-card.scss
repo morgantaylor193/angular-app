@@ -5,6 +5,7 @@
     background: $white;
     border-bottom: $borderMedium solid $primaryColor;
     padding: 1rem;
+    cursor: pointer;
 
     &.active {
       background: $gray;
@@ -34,7 +35,11 @@
       }
 
       .status {
-        color: $green;
+        color: $red;
+
+        &.available {
+          color: $green;
+        }
       }
 
       .location {

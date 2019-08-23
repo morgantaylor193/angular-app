@@ -12,69 +12,68 @@ export class HomePage {
   public isActive = false;
   public rooms = [
     {
+      id: 'code',
       name: 'Code',
       capacity: 6,
       location: 'First Floor',
       statusMessage: 'Available Till 3 PM',
-      available: true,
-      active: false
+      available: true      
     },
     {
+      id: 'theLab',
       name: 'The Lab',
       capacity: 6,
       location: 'First Floor',
-      statusMessage: 'Available Till 3 PM',
-      available: false,
-      active: false
+      statusMessage: 'Available at 11 AM',
+      available: false      
     },
     {
+      id: 'gravity',
       name: 'Gravity',
       capacity: 6,
       location: 'First Floor',
-      statusMessage: 'Available Till 3 PM',
-      available: true,
-      active: false
+      statusMessage: 'Available Till 1 PM',
+      available: true      
     },
     {
+      id: 'revloution',
       name: 'Revolution',
       capacity: 6,
       location: 'First Floor',
-      statusMessage: 'Available Till 3 PM',
-      available: true, 
-      active: false
+      statusMessage: 'Available Till 3:30 PM',
+      available: true,      
     },{
+      id: 'reaction',
       name: 'Reaction',
       capacity: 6,
       location: 'First Floor',
-      statusMessage: 'Available Till 3 PM',
-      available: true,
-      active: false
+      statusMessage: 'Available Till 11:30 AM',
+      available: true      
     },
     {
+      id: 'pi',
       name: 'Pi',
       capacity: 6,
       location: 'First Floor',
-      statusMessage: 'Available Till 3 PM',
-      available: false,
-      active: false
+      statusMessage: 'Available at 11 AM',
+      available: false      
     },
     {
+      id: 'think',
       name: 'Think',
       capacity: 6,
       location: 'First Floor',
       statusMessage: 'Available Till 3 PM',
-      available: true,
-      active: false
+      available: true      
     },
     {
+      id: 'rainmaker',
       name: 'Rainmaker',
       capacity: 6,
       location: 'First Floor',
       statusMessage: 'Available Till 3 PM',
-      available: true, 
-      active: false
+      available: true,      
     }
-    
   ];
 
   public displayFloor(floor){
@@ -83,22 +82,6 @@ export class HomePage {
     }
     else if(floor === 2){
       this.firstFloor = false;
-    }
-  }
-
-  public makeActive(roomName) {
-    let activeRoom = this.rooms.findIndex(room => room.name == roomName);
-
-    if(this.rooms[activeRoom].active){
-      this.rooms[activeRoom].active = false;
-    }
-    else {
-      for(let i = 0; i < this.rooms.length; i++) {
-        this.rooms[i].active = false;
-        if(i === activeRoom) {
-          this.rooms[i].active = true;
-        }
-      }
     }
   }
 }

@@ -20,7 +20,7 @@
   <div class="left-col">
     <div class="title">Corporate Meeting Rooms</div>
     <div *ngFor="let room of rooms">
-      <room-card [roomData]="room" (click)="makeActive(room.name)"></room-card>
+      <room-card [roomData]="room"></room-card>
     </div>
   </div>
 </div>
