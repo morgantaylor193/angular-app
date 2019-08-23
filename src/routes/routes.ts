@@ -7,7 +7,7 @@ const routes: Routes = [
 	{
 		path: '',
 		pathMatch: 'full',
-    loadChildren: '../containers/home/home.module#HomePageModule',
+    loadChildren: '../containers/home/home.module#HomeModule',
     canActivate: [ AuthGuard ]
   },
   {

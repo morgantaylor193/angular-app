@@ -1,0 +1,32 @@
+<!-- REFERENCE ONLY-->
+<!-- <div class="jumbotron">
+    <div *ngIf="authService.authenticated; then welcomeUser else signInPrompt"></div>
+    <ng-template #welcomeUser>
+      <h4>Welcome {{ authService.user?.displayName }}!</h4>
+      <p>Use the navigation bar at the top of the page to get started.</p>
+      <app-rooms></app-rooms>
+    </ng-template>
+    <ng-template #signInPrompt>
+      <a href="javascript:undefined" class="btn btn-primary btn-large" role="button" (click)="signIn()">Click here to sign in</a>
+    </ng-template>
+</div> -->
+<div class="header-offset">
+  <div class="floor-container">
+    <div class="page-max-width floor-inner-container">
+      <div class="first-floor" 
+        [ngClass]="{'active': firstFloor}"
+        (click)="displayFloor(1)">
+        First Floor
+      </div>
+      <div class="second-floor" 
+        [ngClass]="{'active': !firstFloor}"
+        (click)="displayFloor(2)">
+        Second Floor
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-max-width">
+  <home-office-map [firstFloor]="firstFloor"></home-office-map>
+</div>
