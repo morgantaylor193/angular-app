@@ -2,15 +2,21 @@
   [ngClass]="{'active': roomData.active}">
   <div class="row">
     <div class="name">{{roomData.name}}</div>
-    <div class="capicty">{{roomData.capacity}}</div>
+    <div class="capacity">
+      <span>{{roomData.capacity}}</span>
+      <img src="../../assets/img/people.png" class="icon">
+    </div>
   </div>
   <div class="row">
     <div class="status">{{roomData.statusMessage}}</div>
     <div class="location">{{roomData.location}}</div>
   </div>
-  <div *ngIf="roomData.active"
-    class="book row">
-    <div class="standard-button check-in">Check In</div>
-    <div class="standard-button check-out">Check Out</div>
+  <div *ngIf="roomData.active">
+    <div class="standard-button">Reserve Now</div>
+    <div class="book row">
+      <!-- Add in logic here to only check in or out if you are the meeting organizer. -->
+      <div class="standard-button check-in">Check In</div>
+      <div class="standard-button check-out">Check Out</div>
+    </div>
   </div>
 </div>

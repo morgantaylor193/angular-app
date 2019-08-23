@@ -3,7 +3,7 @@
 :host {
   .room-card {
     background: $white;
-    border-top: $borderMedium solid $primaryColor;
+    border-bottom: $borderMedium solid $primaryColor;
     padding: 1rem;
 
     &.active {
@@ -23,6 +23,14 @@
 
       .capacity {
         color: $primaryColor;
+        display: flex;
+        align-items: center;
+
+        .icon {
+          width: 1.2rem;
+          height: 1.2rem;
+          margin-left: 0.5rem;
+        }
       }
 
       .status {
@@ -34,15 +42,16 @@
       }
     }
     .standard-button {
-      width: 45%;
       margin-top: 1rem;
 
       &.check-in {
         background: $green;
+        width: 45%;
       }
 
       &.check-out {
         background: $red;
+        width: 45%;
       }
     }
   }

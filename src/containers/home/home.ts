@@ -42,6 +42,37 @@ export class HomePage {
       statusMessage: 'Available Till 3 PM',
       available: true, 
       active: false
+    },{
+      name: 'Reaction',
+      capacity: 6,
+      location: 'First Floor',
+      statusMessage: 'Available Till 3 PM',
+      available: true,
+      active: false
+    },
+    {
+      name: 'Pi',
+      capacity: 6,
+      location: 'First Floor',
+      statusMessage: 'Available Till 3 PM',
+      available: false,
+      active: false
+    },
+    {
+      name: 'Think',
+      capacity: 6,
+      location: 'First Floor',
+      statusMessage: 'Available Till 3 PM',
+      available: true,
+      active: false
+    },
+    {
+      name: 'Rainmaker',
+      capacity: 6,
+      location: 'First Floor',
+      statusMessage: 'Available Till 3 PM',
+      available: true, 
+      active: false
     }
     
   ];
