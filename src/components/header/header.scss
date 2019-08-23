@@ -9,22 +9,27 @@
     position: fixed;
     background: $white;
 
-    .content {
+    .header-container {
       display: flex;
-      align-items: center;
-      padding: 0 1rem;
-      text-decoration: none;
-
-      .logo {
-        width: 3rem;
-        height: 3rem;
-      }
+      justify-content: space-between;
+      
+      .site-title {
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        text-decoration: none;
   
-      .title {
-        font-size: $remXL;
-        color: $primaryColor;
-        font-weight: $normal;
-        padding-left: 1rem;
+        .logo {
+          width: 3rem;
+          height: 3rem;
+        }
+    
+        .title {
+          font-size: $remXL;
+          color: $primaryColor;
+          font-weight: $normal;
+          padding-left: 1rem;
+        }
       }
     }
   }

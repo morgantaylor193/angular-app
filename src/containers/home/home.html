@@ -18,3 +18,7 @@
 <div class="page-max-width">
   <home-office-map [firstFloor]="firstFloor"></home-office-map>
 </div>
+
+<div *ngFor="let room of rooms">
+  <room-card [roomData]="room" (click)="makeActive(room.name)"></room-card>
+</div>

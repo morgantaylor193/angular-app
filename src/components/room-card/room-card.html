@@ -1,0 +1,16 @@
+<div class="room-card"
+  [ngClass]="{'active': roomData.active}">
+  <div class="row">
+    <div class="name">{{roomData.name}}</div>
+    <div class="capicty">{{roomData.capacity}}</div>
+  </div>
+  <div class="row">
+    <div class="status">{{roomData.statusMessage}}</div>
+    <div class="location">{{roomData.location}}</div>
+  </div>
+  <div *ngIf="roomData.active"
+    class="book row">
+    <div class="standard-button check-in">Check In</div>
+    <div class="standard-button check-out">Check Out</div>
+  </div>
+</div>
