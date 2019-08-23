@@ -5,18 +5,21 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LinkHelper } from 'src/services/link-service/link-helper';
 import { HomeOfficeMap } from 'src/components/home-office-map/home-office-map';
+import { RoomCard } from 'src/components/room-card/room-card';
 
 @NgModule({
   imports: [ RouterModule, CommonModule ],
   declarations: [
     AppHeader,
     AppFooter,
-    HomeOfficeMap
+    HomeOfficeMap,
+    RoomCard
   ],
   exports: [
     AppHeader,
     AppFooter,
-    HomeOfficeMap
+    HomeOfficeMap,
+    RoomCard
   ],
   providers: [
     LinkHelper
